@@ -1,0 +1,232 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net452;uap10.0</TargetFrameworks>
+    <VersionPrefix>1.1.0</VersionPrefix>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <AssemblyName>InstagramApiSharp</AssemblyName>
+    <PackageId>InstagramApiSharp</PackageId>
+    <NetStandardImplicitPackageVersion>2.0</NetStandardImplicitPackageVersion>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>1.1.0.9</Version>
+    <AssemblyVersion>1.1.0.9</AssemblyVersion>
+    <FileVersion>1.1.0.9</FileVersion>
+    <Description>An complete Private Instagram Api for .NET.
+
+
+Support:
+- Create new account with phone number and email.
+- Login with Facebook.
+- Edit Profile, change/remove profile picture.
+- Upload album (videos and photos)
+- Upload story (video/photo) to self story and direct thread
+- Send video/photo/story/profile/link/location to direct
+- Live functions.
+- Discover functions.
+- Search peoples.
+- IGTV functions.
+- Can pass challenge required and two factor authentication.
+- and many more.
+
+See example projects and wiki pages to find out how this library works.</Description>
+    <Authors>Ramtin Jokar, Ali NGame1</Authors>
+    <RepositoryType></RepositoryType>
+    <RepositoryUrl>https://github.com/ramtinak/InstagramApiSharp/</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/ramtinak/InstagramApiSharp/</PackageProjectUrl>
+    <PackageReleaseNotes>v1.1.0.9
+- [Rename] SuggestedSearchesAsync to GetSuggestedSearchesAsync in TVProcessor
+- [Bugfix] for GetFullUserInfoAsync
+
+v1.1.0.8
+- [Add] CheckUsernameAsync to IInstaApi
+- [Add] GetRequestForDownloadAccountDataAsync to AccountProcessor
+- [Add] Progress changed action to change profile picture
+- [Bugfix] for GetFullUserInfoAsync (thx to rohollah for report)
+- [Bugfix] for random android version (thx to @Aspmaker )
+- [Cleanup] some functions
+
+v1.1.0.7
+- [Bugfix] for ShareMediaToThreadAsync (thx to @huseyinkarael for report)
+- [Bugfix] for image/video uploader (thx to @alexrepetskyi for report)
+- [Bugfix] for like/unlike comment (thx to @aspmaker for report)
+- [Bugfix] for GetMediaCommentsAsync (thx to @aspmaker for report)
+- [Bugfix] for GetMediaRepliesCommentsAsync (thx to @aspmaker for report)
+- [Add] Some new property to InstaComment
+- [Add] LeaveGroupThreadAsync to MessagingProcessor
+- [Add] 1 new device to AndroidDevices
+
+v1.1.0.5
+- [Add] Progress changed action to every uploading functions(media,story,direct)
+- [Bugfix] for random android version (thx to @aspmaker )
+
+v1.1.0.2
+- [Add] ShareMediaToThreadAsync to MessagingProcessor
+- [Add] GetFullUserInfoAsync to UserProcessor
+- [Add] 1 new device to AndroidDevices
+- [Cleanup] some classes
+
+v1.1.0.1
+- [Change] SendDirectMessageAsync to SendDirectTextAsync
+- [Fix] SendDirectTextAsync issue
+- [Add] DeleteMultipleCommentsAsync to CommentProcessor
+- [Add] Like/Unlike comment to CommentProcessor
+- [Update] GetMediaCommentsAsync in CommentProcessor
+- [Add] Pagination support to GetMediaRepliesCommentsAsync
+
+1.1.0.0
+- [Add] UploadVideoAsync to TVProcessor
+- [Change] User agent to v61.0.0.19.86 for supporting new apis
+- [Add] Support FelixShare (igtv shared video) in direct threads
+- [Add] Some new properties to direct threads (new api)
+- [Add] Some new properties to InstaUserInfo
+- [Update] InstaCurrentUser.Gender to InstaGenderType
+- [Add] Some new properties to InstaMedia
+- [Add] Some new properties to InstaStory
+- [Update] InstaTagFeed class
+- [Bugfix] for GetMediaRepliesCommentsAsync in CommentProcessor
+
+v1.0.6.0
+- [Add] Instagram TV support in IInstaApi.TVProcessor
+- [Update] Add Timeout and NeedsChallenge to ResultInfo (thx to @Lorymi)
+- [Add] like direct message in thread
+
+v1.0.5.6
+- [Update] UploadPhotoAsync to newer api
+- [Add] Set location while uploading photo/video/album in MediaProcessor
+- [Move] SetDevice to IInstaApi
+
+v1.0.5.5
+- [Bugfix] for random device (user agent). now supports 20 device
+- [Add] Android version to device (randomly from android v4.0 to v9.0)
+- [Add] GetCurrentDevice to InstaApi
+- [Add] Biography with entities property to InstaUserInfo
+- [Add] Search users by location to LocationProcessor
+- [Bugfix] For some functions in LiveProcessor
+- [Add] GetJoinRequestsAsync to LiveProcessor
+- [Add] Send disappering photo to direct thread
+
+v1.0.5.4
+- [Add] Resend two factor login code by username, email and phone (thx to @Lorymi )
+
+v1.0.5.3
+- [Update] GetRequestForEditProfileAsync in AccountProcessor
+- [Update] EditProfileAsync parameters, please check updated /samples/Examples/Samples/Account.cs
+- [Add] Set biography (support hashtags and user mention) in AccountProcessor
+- [Add] Send disappering video to direct thread
+- [Cleanup] some classes and functions
+
+v1.0.5.2
+- [Add] More properties for InstaStoryLocation (Positioning properties)
+
+v1.0.5.1
+- [Add] StoryCTA Added. This used for stories with links in see more.
+
+v1.0.5.0
+- [Add] link support for direct threads
+- [Add] Send link as direct message
+- [Add] location support for direct threads
+- [Add] Send location as direct message
+- [Bugfix] for SendDirectProfileAsync
+
+v1.0.4.9
+- [Bugfix] for highlight
+
+v1.0.4.8
+- [Add] Highlight support (create, delete, get) to StoryProcessor
+
+v1.0.4.7
+- [Add] Placeholder support for direct threads
+- [Add] some other info to InstaUserInfo [thx to @GormYa]
+- Some cleanup
+
+v1.0.4.6
+- [Add] ActionLog support for direct threads
+- [Add] Profile support for direct threads
+- [Add] Send profile as direct message 
+- [Add] UpdateDirectThreadAsync to Messaging
+- [Add] mute/unmute thread to Messaging
+- [Add] DeclineDirectPendingRequestsAsync to Messaging
+- [Bugfix] for GetDirectInboxThreadAsync
+- [Bugfix] for ApproveDirectPendingRequestAsync
+- [Bugfix] for DeclineAllDirectPendingRequestsAsync
+- [Bugfix] for DicoverProccesor.GetSuggestedSearchesAsync
+
+v1.0.4.5
+- Support raven media in direct messages
+- Support share media in direct messages
+
+v1.0.4.4
+- Send video to story (self story, direct story and both) added
+- Seen story added
+- Send direct photo/video added
+
+v1.0.4.3
+- Added RegenerateTwoFactorBackupCodesAsync to AccountProcessor
+
+v1.0.4.2
+- public GetRequestForEditProfileAsync method
+
+v1.0.4.1
+- GetRecentActivityFeedAsync added to UserProcessor
+
+v1.0.4.0
+- Build option for uwp(NET CORE)</PackageReleaseNotes>
+    <Copyright>Ramtin Jokar</Copyright>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageTags>C#, Instagram, Insta, Client, Sharp, InstagramApiSharp, Client, Api, media, video, album, photo, igtv</PackageTags>
+    <PackageIconUrl>http://s9.picofile.com/file/8336165642/insta5.png</PackageIconUrl>
+    <NeutralLanguage>en-US</NeutralLanguage>
+  </PropertyGroup>
+  
+   <PropertyGroup Condition=" '$(OS)' != 'Windows_NT' ">
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(OS)' == 'Windows_NT' ">
+      <TargetFrameworks>netstandard2.0;net452;uap10.0</TargetFrameworks>
+    </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+    <TreatSpecificWarningsAsErrors />
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net452' OR  '$(TargetFramework)' == 'net471'">
+    <Reference Include="System" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'uap10.0'">
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <NugetTargetMoniker>UAP,Version=v10.0</NugetTargetMoniker>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.16299.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.14393.0</TargetPlatformMinVersion>
+    <TargetFrameworkIdentifier>.NETCore</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <DefineConstants>$(DefineConstants);WINDOWS_UWP</DefineConstants>
+    <LanguageTargets>$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets</LanguageTargets>
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+  </PropertyGroup>
+  
+  <ItemGroup Condition=" '$(TargetFramework)' == 'uap10.0' ">
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform " Version="5.2.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Remove="API\Processors\CommentProcessor.cs~RF33c063e.TMP" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="NETStandard.Library" Version="2.0" />
+  </ItemGroup>
+</Project>
